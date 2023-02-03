@@ -1,16 +1,15 @@
 let dlugElement = document.querySelector(".js-dlug");
 let formElement = document.querySelector(".js-form");
 let rataElement = document.querySelector(".js-rata");
+let countButton = document.querySelector(".js-countButton");
 
 const txt = "Koszt płatność za obsługę (płatne w ratach):";
 
 formElement.addEventListener("submit", (e) => {
     e.preventDefault();
 
-
     let dlug = dlugElement.value;
-
-    console.log(dlug);
+    let cheaper = dlugElement.value * 0.03;
 
 
     switch (true) {
@@ -51,10 +50,8 @@ formElement.addEventListener("submit", (e) => {
             rataElement.innerText = txt + `3249 zł`;
             break;
         case (dlug > 150000):
-            rataElement.innerText = txt + `3% WZ czyli (${dlugElement.value}*0,03)`;
+            rataElement.innerText = txt + cheaper;
             break;
-
     }
 
 });
-
