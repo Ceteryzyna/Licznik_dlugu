@@ -9,21 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
         integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script defer src="js/data.js"></script>
 </head>
 
 <body>
-    <form class="js-form">
-        <fieldset>
-            <legend>Licznik zadłużenia</legend>
-            <label>wysokosc zadluzenia <input type="number" class="js-dlug"> zł</label>
-            <p><button class="js-countButton"> policz ratę</button></p>
-            <p><button type="reset">resetuj</button></p>
-            <div class="js-rata">NaN</div>
-        </fieldset>
+    <div class="section">
+        <form class="js-form">
+            <fieldset>
+                <h1 class="section__header">Oblicz opłatę za pomoc prawną</h1>
+                <div class="section__block">
+                    <label><span class="section__item">Podaj wysokość
+                            zadłużenia:</span></label>
+                    <input type="number" class="js-dlug section__amount" placeholder="wpisz kwotę" autofocus>
+                    <label>
+                        <span class="section__item">Opłata za pomoc prawną:</span>
+                    </label>
+                    <span class="js-rata section__form section__amount section__amount--result">NaN</span>
+                    <p><span class ="js-tip section__tip"></span></p>
+                </div>
+                <p><button class="js-countButton section__button"> Oblicz cenę</button></p>
+    </div>
+    </fieldset>
     </form>
-
+    </div>
 </body>
 
 </html>
