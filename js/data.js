@@ -1,9 +1,15 @@
+let countButtonElement = document.querySelector(".js-countButton");
+
 {
     let tipElement = document.querySelector(".js-tip");
-    let countButtonElement = document.querySelector(".js-countButton");
-
     countButtonElement.addEventListener("click", () => {
         tipElement.innerText = `*płatność rozkładana na 3 raty`
+    });
+}
+{
+    let discount = document.querySelector(".js-discount");
+    countButtonElement.addEventListener("click", () => {
+        discount.innerHTML = `<button class="js-buttonDiscount section__buttonDiscount"> kliknij po rabat </button>`
     });
 }
 

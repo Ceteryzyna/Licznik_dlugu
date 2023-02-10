@@ -58,11 +58,20 @@ html {
     border-radius: 5px;
     display: block;
     margin: 0 auto;
-}
+    }
 
 .section__tip {
     display: block;
     margin: 0 auto;
     text-align: center;
     font-size: 10px;
+}
+.section__buttonDiscount {
+    color: rgb(255, 0, 0);
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    text-decoration: underline;
 }
